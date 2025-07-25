@@ -18,8 +18,8 @@ library(worlddatr)
 # Centroid/centre of country coordinates
 centroids <- read_csv("data/external/centroids.csv", show_col_types = FALSE)
 
-# ICTRP Phase I curation
-phase_I <- read_csv("data/curated/ICTRP_extract_all_NTD.csv",
+# ICTRP Extract of all NTDs
+ictrp_extract <- read_csv("data/curated/ICTRP_extract_all_NTD.csv",
                     show_col_types = FALSE, guess_max = Inf) %>% 
   select(TrialID, `TARGET SIZE`) 
 
@@ -56,7 +56,7 @@ ictrp <- read_csv("data/curated/Conditions_17.csv", guess_max = Inf, show_col_ty
          ) %>% 
   left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>% 
   select(-country, -economy) %>% 
-  left_join(phase_I)
+  left_join(ictrp_extract)
 
 # WHO regions data
 who_regions <- read_csv("data/external/who-regions.csv", guess_max = Inf, show_col_types = FALSE) %>% 
