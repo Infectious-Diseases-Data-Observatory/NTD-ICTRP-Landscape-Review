@@ -1,0 +1,251 @@
+alpha_3_code,alpha_2_code,numeric,country,economy,income_group,redcap_number,display_name
+AFG,AF,4,Afghanistan,Afghanistan,Low income,1,Afghanistan
+ALB,AL,8,Albania,Albania,Upper middle income,3,Albania
+DZA,DZ,12,Algeria,Algeria,Upper middle income,4,Algeria
+ASM,AS,16,American Samoa,American Samoa,High income,5,American Samoa
+AND,AD,20,Andorra,Andorra,High income,6,Andorra
+AGO,AO,24,Angola,Angola,Lower middle income,7,Angola
+AIA,AI,660,Anguilla,NA,NA,8,Anguilla
+ATA,AQ,10,Antarctica,NA,NA,9,Antarctica
+ATG,AG,28,Antigua and Barbuda,Antigua and Barbuda,High income,10,Antigua and Barbuda
+ARG,AR,32,Argentina,Argentina,Upper middle income,11,Argentina
+ARM,AM,51,Armenia,Armenia,Upper middle income,12,Armenia
+ABW,AW,533,Aruba,Aruba,High income,13,Aruba
+AUS,AU,36,Australia,Australia,High income,14,Australia
+AUT,AT,40,Austria,Austria,High income,15,Austria
+AZE,AZ,31,Azerbaijan,Azerbaijan,Upper middle income,16,Azerbaijan
+BHS,BS,44,Bahamas (The),"Bahamas, The",High income,17,Bahamas 
+BHR,BH,48,Bahrain,Bahrain,High income,18,Bahrain
+BGD,BD,50,Bangladesh,Bangladesh,Lower middle income,19,Bangladesh
+BRB,BB,52,Barbados,Barbados,High income,20,Barbados
+BLR,BY,112,Belarus,Belarus,Upper middle income,21,Belarus
+BEL,BE,56,Belgium,Belgium,High income,22,Belgium
+BLZ,BZ,84,Belize,Belize,Upper middle income,23,Belize
+BEN,BJ,204,Benin,Benin,Lower middle income,24,Benin
+BMU,BM,60,Bermuda,Bermuda,High income,25,Bermuda
+BTN,BT,64,Bhutan,Bhutan,Lower middle income,26,Bhutan
+BOL,BO,68,Bolivia (Plurinational State of),Bolivia,Lower middle income,27,Bolivia
+BES,BQ,535,"Bonaire, Sint Eustatius and Saba",NA,NA,28,"Bonaire, Sint Eustatius and Saba"
+BIH,BA,70,Bosnia and Herzegovina,Bosnia and Herzegovina,Upper middle income,29,Bosnia and Herzegovina
+BWA,BW,72,Botswana,Botswana,Upper middle income,30,Botswana
+BVT,BV,74,Bouvet Island,NA,NA,31,Bouvet Island
+BRA,BR,76,Brazil,Brazil,Upper middle income,32,Brazil
+IOT,IO,86,British Indian Ocean Territory (the),NA,NA,33,British Indian Ocean Territory
+BRN,BN,96,Brunei Darussalam,Brunei Darussalam,High income,34,Brunei
+BGR,BG,100,Bulgaria,Bulgaria,High income,35,Bulgaria
+BFA,BF,854,Burkina Faso,Burkina Faso,Low income,36,Burkina Faso
+BDI,BI,108,Burundi,Burundi,Low income,37,Burundi
+CPV,CV,132,Cabo Verde,Cabo Verde,Upper middle income,41,Cabo Verde
+KHM,KH,116,Cambodia,Cambodia,Lower middle income,38,Cambodia
+CMR,CM,120,Cameroon,Cameroon,Lower middle income,39,Cameroon
+CAN,CA,124,Canada,Canada,High income,40,Canada
+CYM,KY,136,Cayman Islands (the),Cayman Islands,High income,42,Cayman Islands
+CAF,CF,140,Central African Republic (the),Central African Republic,Low income,43,Central African Republic
+TCD,TD,148,Chad,Chad,Low income,44,Chad
+CHL,CL,152,Chile,Chile,High income,45,Chile
+CHN,CN,156,China,China,Upper middle income,46,China
+CXR,CX,162,Christmas Island,NA,NA,47,Christmas Island
+CCK,CC,166,Cocos (Keeling) Islands (the),NA,NA,48,Cocos Islands 
+COL,CO,170,Colombia,Colombia,Upper middle income,49,Colombia
+COM,KM,174,Comoros (the),Comoros,Lower middle income,50,Comoros
+COD,CD,180,Congo (the Democratic Republic of the),"Congo, Dem. Rep.",Low income,52,Congo (Dem. Rep.)
+COG,CG,178,Congo (the),"Congo, Rep.",Lower middle income,51,Congo (Rep.)
+COK,CK,184,Cook Islands (the),NA,NA,53,Cook Islands 
+CRI,CR,188,Costa Rica,Costa Rica,High income,54,Costa Rica
+HRV,HR,191,Croatia,Croatia,High income,56,Croatia
+CUB,CU,192,Cuba,Cuba,Upper middle income,57,Cuba
+CUW,CW,531,Curacao,Curaçao,High income,58,Curacao
+CYP,CY,196,Cyprus,Cyprus,High income,59,Cyprus
+CZE,CZ,203,Czechia,Czechia,High income,60,Czechia
+CIV,CI,384,Cote d'Ivoire,Côte d’Ivoire,Lower middle income,55,Cote d'Ivoire
+DNK,DK,208,Denmark,Denmark,High income,61,Denmark
+DJI,DJ,262,Djibouti,Djibouti,Lower middle income,62,Djibouti
+DMA,DM,212,Dominica,Dominica,Upper middle income,63,Dominica
+DOM,DO,214,Dominican Republic (the),Dominican Republic,Upper middle income,64,Dominican Republic
+ECU,EC,218,Ecuador,Ecuador,Upper middle income,65,Ecuador
+EGY,EG,818,Egypt,"Egypt, Arab Rep.",Lower middle income,66,Egypt
+SLV,SV,222,El Salvador,El Salvador,Upper middle income,67,El Salvador
+GNQ,GQ,226,Equatorial Guinea,Equatorial Guinea,Upper middle income,68,Equatorial Guinea
+ERI,ER,232,Eritrea,Eritrea,Low income,69,Eritrea
+EST,EE,233,Estonia,Estonia,High income,70,Estonia
+SWZ,SZ,748,Eswatini,Eswatini,Lower middle income,214,Eswatini
+ETH,ET,231,Ethiopia,Ethiopia,NA,71,Ethiopia
+FLK,FK,238,Falkland Islands (the) [Malvinas],NA,NA,72,Falkland Islands
+FRO,FO,234,Faroe Islands (the),Faroe Islands,High income,73,Faroe Islands
+FJI,FJ,242,Fiji,Fiji,Upper middle income,74,Fiji
+FIN,FI,246,Finland,Finland,High income,75,Finland
+FRA,FR,250,France,France,High income,76,France
+GUF,GF,254,French Guiana,NA,NA,77,French Guiana
+PYF,PF,258,French Polynesia,French Polynesia,High income,78,French Polynesia
+ATF,TF,260,French Southern Territories (the),NA,NA,79,French Southern Territories
+GAB,GA,266,Gabon,Gabon,Upper middle income,80,Gabon
+GMB,GM,270,Gambia (the),"Gambia, The",Low income,81,Gambia
+GEO,GE,268,Georgia,Georgia,Upper middle income,82,Georgia
+DEU,DE,276,Germany,Germany,High income,83,Germany
+GHA,GH,288,Ghana,Ghana,Lower middle income,84,Ghana
+GIB,GI,292,Gibraltar,Gibraltar,High income,85,Gibraltar
+GRC,GR,300,Greece,Greece,High income,86,Greece
+GRL,GL,304,Greenland,Greenland,High income,87,Greenland
+GRD,GD,308,Grenada,Grenada,Upper middle income,88,Grenada
+GLP,GP,312,Guadeloupe,NA,NA,89,Guadeloupe
+GUM,GU,316,Guam,Guam,High income,90,Guam
+GTM,GT,320,Guatemala,Guatemala,Upper middle income,91,Guatemala
+GGY,GG,831,Guernsey,Guernsey,High income,92,Guernsey
+GIN,GN,324,Guinea,Guinea,Lower middle income,93,Guinea
+GNB,GW,624,Guinea-Bissau,Guinea-Bissau,Low income,94,Guinea-Bissau
+GUY,GY,328,Guyana,Guyana,High income,95,Guyana
+HTI,HT,332,Haiti,Haiti,Lower middle income,96,Haiti
+HMD,HM,334,Heard Island and McDonald Islands,NA,NA,97,Heard Island and McDonald Islands
+VAT,VA,336,Holy See (the),NA,NA,98,Holy See
+HND,HN,340,Honduras,Honduras,Lower middle income,99,Honduras
+HKG,HK,344,Hong Kong,"Hong Kong SAR, China",High income,100,Hong Kong
+HUN,HU,348,Hungary,Hungary,High income,101,Hungary
+ISL,IS,352,Iceland,Iceland,High income,102,Iceland
+IND,IN,356,India,India,Lower middle income,103,India
+IDN,ID,360,Indonesia,Indonesia,Upper middle income,104,Indonesia
+IRN,IR,364,Iran (Islamic Republic of),"Iran, Islamic Rep.",Upper middle income,105,Iran
+IRQ,IQ,368,Iraq,Iraq,Upper middle income,106,Iraq
+IRL,IE,372,Ireland,Ireland,High income,107,Ireland
+IMN,IM,833,Isle of Man,Isle of Man,High income,108,Isle of Man
+ISR,IL,376,Israel,Israel,High income,109,Israel
+ITA,IT,380,Italy,Italy,High income,110,Italy
+JAM,JM,388,Jamaica,Jamaica,Upper middle income,111,Jamaica
+JPN,JP,392,Japan,Japan,High income,112,Japan
+JEY,JE,832,Jersey,Jersey,High income,113,Jersey
+JOR,JO,400,Jordan,Jordan,Lower middle income,114,Jordan
+KAZ,KZ,398,Kazakhstan,Kazakhstan,Upper middle income,115,Kazakhstan
+KEN,KE,404,Kenya,Kenya,Lower middle income,116,Kenya
+KIR,KI,296,Kiribati,Kiribati,Lower middle income,117,Kiribati
+PRK,KP,408,Korea (the Democratic People's Republic of),"Korea, Dem. People's Rep.",Low income,118,North Korea
+KOR,KR,410,Korea (the Republic of),"Korea, Rep.",High income,119,South Korea
+KWT,KW,414,Kuwait,Kuwait,High income,120,Kuwait
+KGZ,KG,417,Kyrgyzstan,Kyrgyz Republic,Lower middle income,121,Kyrgyzstan
+LAO,LA,418,Lao People's Democratic Republic (the),Lao PDR,Lower middle income,122,Laos
+LVA,LV,428,Latvia,Latvia,High income,123,Latvia
+LBN,LB,422,Lebanon,Lebanon,Lower middle income,124,Lebanon
+LSO,LS,426,Lesotho,Lesotho,Lower middle income,125,Lesotho
+LBR,LR,430,Liberia,Liberia,Low income,126,Liberia
+LBY,LY,434,Libya,Libya,Upper middle income,127,Libya
+LIE,LI,438,Liechtenstein,Liechtenstein,High income,128,Liechtenstein
+LTU,LT,440,Lithuania,Lithuania,High income,129,Lithuania
+LUX,LU,442,Luxembourg,Luxembourg,High income,130,Luxembourg
+MAC,MO,446,Macao,"Macao SAR, China",High income,131,Macao
+MDG,MG,450,Madagascar,Madagascar,Low income,133,Madagascar
+MWI,MW,454,Malawi,Malawi,Low income,134,Malawi
+MYS,MY,458,Malaysia,Malaysia,Upper middle income,135,Malaysia
+MDV,MV,462,Maldives,Maldives,Upper middle income,136,Maldives
+MLI,ML,466,Mali,Mali,Low income,137,Mali
+MLT,MT,470,Malta,Malta,High income,138,Malta
+MHL,MH,584,Marshall Islands (the),Marshall Islands,Upper middle income,139,Marshall Islands
+MTQ,MQ,474,Martinique,NA,NA,140,Martinique
+MRT,MR,478,Mauritania,Mauritania,Lower middle income,141,Mauritania
+MUS,MU,480,Mauritius,Mauritius,Upper middle income,142,Mauritius
+MYT,YT,175,Mayotte,NA,NA,143,Mayotte
+MEX,MX,484,Mexico,Mexico,Upper middle income,144,Mexico
+FSM,FM,583,Micronesia (Federated States of),"Micronesia, Fed. Sts.",Lower middle income,145,Micronesia
+MDA,MD,498,Moldova (the Republic of),Moldova,Upper middle income,146,Moldova
+MCO,MC,492,Monaco,Monaco,High income,147,Monaco
+MNG,MN,496,Mongolia,Mongolia,Upper middle income,148,Mongolia
+MNE,ME,499,Montenegro,Montenegro,Upper middle income,149,Montenegro
+MSR,MS,500,Montserrat,NA,NA,150,Montserrat
+MAR,MA,504,Morocco,Morocco,Lower middle income,151,Morocco
+MOZ,MZ,508,Mozambique,Mozambique,Low income,152,Mozambique
+MMR,MM,104,Myanmar,Myanmar,Lower middle income,153,Myanmar
+NAM,NA,516,Namibia,Namibia,Lower middle income,154,Namibia
+NRU,NR,520,Nauru,Nauru,High income,155,Nauru
+NPL,NP,524,Nepal,Nepal,Lower middle income,156,Nepal
+NLD,NL,528,Netherlands (Kingdom of the),Netherlands,High income,157,Netherlands
+NCL,NC,540,New Caledonia,New Caledonia,High income,158,New Caledonia
+NZL,NZ,554,New Zealand,New Zealand,High income,159,New Zealand
+NIC,NI,558,Nicaragua,Nicaragua,Lower middle income,160,Nicaragua
+NER,NE,562,Niger (the),Niger,Low income,161,Niger
+NGA,NG,566,Nigeria,Nigeria,Lower middle income,162,Nigeria
+NIU,NU,570,Niue,NA,NA,163,Niue
+NFK,NF,574,Norfolk Island,NA,NA,164,Norfolk Island
+MKD,MK,807,North Macedonia,North Macedonia,Upper middle income,132,North Macedonia
+MNP,MP,580,Northern Mariana Islands (the),Northern Mariana Islands,High income,165,Northern Mariana Islands
+NOR,NO,578,Norway,Norway,High income,166,Norway
+OMN,OM,512,Oman,Oman,High income,167,Oman
+PAK,PK,586,Pakistan,Pakistan,Lower middle income,168,Pakistan
+PLW,PW,585,Palau,Palau,High income,169,Palau
+PSE,PS,275,"Palestine, State of",West Bank and Gaza,Lower middle income,170,Palestine
+PAN,PA,591,Panama,Panama,High income,171,Panama
+PNG,PG,598,Papua New Guinea,Papua New Guinea,Lower middle income,172,Papua New Guinea
+PRY,PY,600,Paraguay,Paraguay,Upper middle income,173,Paraguay
+PER,PE,604,Peru,Peru,Upper middle income,174,Peru
+PHL,PH,608,Philippines (the),Philippines,Lower middle income,175,Philippines
+PCN,PN,612,Pitcairn,NA,NA,176,Pitcairn
+POL,PL,616,Poland,Poland,High income,177,Poland
+PRT,PT,620,Portugal,Portugal,High income,178,Portugal
+PRI,PR,630,Puerto Rico,Puerto Rico (U.S.),High income,179,Puerto Rico
+QAT,QA,634,Qatar,Qatar,High income,180,Qatar
+ROU,RO,642,Romania,Romania,High income,182,Romania
+RUS,RU,643,Russian Federation (the),Russian Federation,High income,183,Russia
+RWA,RW,646,Rwanda,Rwanda,Low income,184,Rwanda
+REU,RE,638,Reunion,NA,NA,181,Reunion
+BLM,BL,652,Saint Barthelemy,NA,NA,185,Saint Barthelemy
+SHN,SH,654,"Saint Helena, Ascension and Tristan da Cunha",NA,NA,186,"Saint Helena, Ascension and Tristan da Cunha"
+KNA,KN,659,Saint Kitts and Nevis,St. Kitts and Nevis,High income,187,Saint Kitts and Nevis
+LCA,LC,662,Saint Lucia,St. Lucia,Upper middle income,188,Saint Lucia
+MAF,MF,663,Saint Martin (French part),St. Martin (French part),High income,189,Saint Martin
+SPM,PM,666,Saint Pierre and Miquelon,NA,NA,190,Saint Pierre and Miquelon
+VCT,VC,670,Saint Vincent and the Grenadines,St. Vincent and the Grenadines,Upper middle income,191,Saint Vincent and the Grenadines
+WSM,WS,882,Samoa,Samoa,Upper middle income,192,Samoa
+SMR,SM,674,San Marino,San Marino,High income,193,San Marino
+STP,ST,678,Sao Tome and Principe,São Tomé and Príncipe,Lower middle income,194,Sao Tome and Principe
+SAU,SA,682,Saudi Arabia,Saudi Arabia,High income,195,Saudi Arabia
+SEN,SN,686,Senegal,Senegal,Lower middle income,196,Senegal
+SRB,RS,688,Serbia,Serbia,Upper middle income,197,Serbia
+SYC,SC,690,Seychelles,Seychelles,High income,198,Seychelles
+SLE,SL,694,Sierra Leone,Sierra Leone,Low income,199,Sierra Leone
+SGP,SG,702,Singapore,Singapore,High income,200,Singapore
+SXM,SX,534,Sint Maarten (Dutch part),Sint Maarten (Dutch part),High income,201,Sint Maarten
+SVK,SK,703,Slovakia,Slovak Republic,High income,202,Slovakia
+SVN,SI,705,Slovenia,Slovenia,High income,203,Slovenia
+SLB,SB,90,Solomon Islands,Solomon Islands,Lower middle income,204,Solomon Islands
+SOM,SO,706,Somalia,Somalia,Low income,205,Somalia
+ZAF,ZA,710,South Africa,South Africa,Upper middle income,206,South Africa
+SGS,GS,239,South Georgia and the South Sandwich Islands,NA,NA,207,South Georgia and the South Sandwich Islands
+SSD,SS,728,South Sudan,South Sudan,Low income,208,South Sudan
+ESP,ES,724,Spain,Spain,High income,209,Spain
+LKA,LK,144,Sri Lanka,Sri Lanka,Lower middle income,210,Sri Lanka
+SDN,SD,729,Sudan (the),Sudan,Low income,211,Sudan
+SUR,SR,740,Suriname,Suriname,Upper middle income,212,Suriname
+SJM,SJ,744,Svalbard and Jan Mayen,NA,NA,213,Svalbard and Jan Mayen
+SWE,SE,752,Sweden,Sweden,High income,215,Sweden
+CHE,CH,756,Switzerland,Switzerland,High income,216,Switzerland
+SYR,SY,760,Syrian Arab Republic (the),Syrian Arab Republic,Low income,217,Syria
+TWN,TW,158,Taiwan (Province of China),"Taiwan, China",High income,218,Taiwan
+TJK,TJ,762,Tajikistan,Tajikistan,Lower middle income,219,Tajikistan
+TZA,TZ,834,"Tanzania, the United Republic of",Tanzania,Lower middle income,220,Tanzania
+THA,TH,764,Thailand,Thailand,Upper middle income,221,Thailand
+TLS,TL,626,Timor-Leste,Timor-Leste,Lower middle income,222,Timor-Leste
+TGO,TG,768,Togo,Togo,Low income,223,Togo
+TKL,TK,772,Tokelau,NA,NA,224,Tokelau
+TON,TO,776,Tonga,Tonga,Upper middle income,225,Tonga
+TTO,TT,780,Trinidad and Tobago,Trinidad and Tobago,High income,226,Trinidad and Tobago
+TUN,TN,788,Tunisia,Tunisia,Lower middle income,227,Tunisia
+TKM,TM,795,Turkmenistan,Turkmenistan,Upper middle income,229,Turkmenistan
+TCA,TC,796,Turks and Caicos Islands (the),Turks and Caicos Islands,High income,230,Turks and Caicos Islands
+TUV,TV,798,Tuvalu,Tuvalu,Upper middle income,231,Tuvalu
+TUR,TR,792,Turkiye,Türkiye,Upper middle income,228,Turkiye
+UGA,UG,800,Uganda,Uganda,Low income,232,Uganda
+UKR,UA,804,Ukraine,Ukraine,Upper middle income,233,Ukraine
+ARE,AE,784,United Arab Emirates (the),United Arab Emirates,High income,234,UAE
+GBR,GB,826,United Kingdom of Great Britain and Northern Ireland (the),United Kingdom,High income,235,UK 
+UMI,UM,581,United States Minor Outlying Islands (the),NA,NA,237,US Minor Outlying Islands
+USA,US,840,United States of America (the),United States,High income,236,USA
+URY,UY,858,Uruguay,Uruguay,High income,238,Uruguay
+UZB,UZ,860,Uzbekistan,Uzbekistan,Lower middle income,239,Uzbekistan
+VUT,VU,548,Vanuatu,Vanuatu,Lower middle income,240,Vanuatu
+VEN,VE,862,Venezuela (Bolivarian Republic of),"Venezuela, RB",NA,241,Venezuela
+VNM,VN,704,Viet Nam,Vietnam,Lower middle income,242,Viet Nam
+VGB,VG,92,Virgin Islands (British),British Virgin Islands,High income,243,Virgin Islands (UK)
+VIR,VI,850,Virgin Islands (U.S.),Virgin Islands (U.S.),High income,244,Virgin Islands (US)
+WLF,WF,876,Wallis and Futuna,NA,NA,245,Wallis and Futuna
+ESH,EH,732,Western Sahara,NA,NA,246,Western Sahara
+YEM,YE,887,Yemen,"Yemen, Rep.",Low income,247,Yemen
+ZMB,ZM,894,Zambia,Zambia,Lower middle income,248,Zambia
+ZWE,ZW,716,Zimbabwe,Zimbabwe,Lower middle income,249,Zimbabwe
+ALA,AX,248,Aland Islands,NA,NA,2,Aland Islands
+XKX,UNASSIGNED,999,Kosovo,Kosovo,Upper middle income,NA,Kosovo
