@@ -8,15 +8,22 @@ library(ggpattern)
 library(readxl)
 library(table1)
 library(janitor)
+library(scales)
 library(worlddatr)
-
+library(cowplot)
+library(viridisLite)
 #-------------------------------------------------------------------------------
 # Utility function
 # `%!in%` = Negate(`%in%`)
 
+source("code/cleaning/clean_burden_data.R")
 #-------------------------------------------------------------------------------
 # Centroid/centre of country coordinates
 centroids <- read_csv("data/external/centroids.csv", show_col_types = FALSE)
+
+# Display names for countries
+display_names <- read_csv("data/curated/display_names.csv", show_col_types = FALSE) %>% 
+  select(alpha_3_code, display_name)
 
 # ICTRP Extract of all NTDs
 ictrp_extract <- read_csv("data/curated/ICTRP_extract_all_NTD.csv",
@@ -25,7 +32,12 @@ ictrp_extract <- read_csv("data/curated/ICTRP_extract_all_NTD.csv",
 
 # Data on country population
 populations <- read_csv("data/external/populations.csv", skip = 4, show_col_types = FALSE, guess_max = Inf) %>% 
-  select(`Country Name`, `Country Code`, `2023`)
+  select(`Country Name`, `Country Code`, `2023`, `2018`, `2013`, `2008`) %>% 
+  clean_names()
+
+# Cleaned inclusion ages 
+ages <- read_csv("data/analysis/ages.csv", show_col_types = FALSE) %>% 
+  select(TrialID, age_min, age_max)
 
 # IDDO-Curated ICTRP data 
 ictrp <- read_csv("data/curated/Conditions_17.csv", guess_max = Inf, show_col_types = FALSE) %>% 
@@ -56,12 +68,28 @@ ictrp <- read_csv("data/curated/Conditions_17.csv", guess_max = Inf, show_col_ty
          ) %>% 
   left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>% 
   select(-country, -economy) %>% 
-  left_join(ictrp_extract)
+  left_join(ictrp_extract) 
+
+ictrp[which(ictrp$COUNTRY == "ETH"),"income_group"] = "Low income"
 
 # WHO regions data
 who_regions <- read_csv("data/external/who-regions.csv", guess_max = Inf, show_col_types = FALSE) %>% 
   select(-Year) %>% 
   rename("WHO_Region" = "WHO region") 
+
+#DALYs burden data 
+cd_burden <- read_csv("data/external/DALYs-CD.csv", show_col_types = FALSE) %>% 
+  clean_burden_data()
+
+sch_burden <- read_csv("data/external/DALYs-SCH.csv", show_col_types = FALSE)%>% 
+  clean_burden_data()
+
+sth_burden <- read_csv("data/external/DALYs-INF.csv", show_col_types = FALSE) %>% 
+  clean_burden_data()
+
+vl_burden <- read_csv("data/external/DALYs-VL.csv", show_col_types = FALSE) %>% 
+  clean_burden_data()
+
 #-------------------------------------------------------------------------------
 # Data cleaning
 ictrp[which(is.na(ictrp$CENTRE)), "CENTRE"] <- "Missing"
