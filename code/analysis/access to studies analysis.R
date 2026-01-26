@@ -171,8 +171,8 @@ access_vl = ggplot(df_vl, aes(x = income_group, y = targets_per_10000, fill = in
         axis.title = element_text(size = 12),
         axis.title.y = element_blank()) +
   scale_y_continuous(breaks = scales::pretty_breaks()) +
-  geom_text(df_vl, mapping = aes(x = (income_group ), y = targets_per_10000, label = display_name), 
-            nudge_x = .25, nudge_y = 0.004, size = 3)
+  geom_text_repel(df_vl, mapping = aes(x = (income_group ), y = targets_per_10000, label = display_name), 
+            nudge_x = .35, nudge_y = -0.001, size = 3, segment.size = NA)
 
 #-------------------------------------------------------------------------------
 # STH data
@@ -219,7 +219,7 @@ access_sth = ggplot(df_sth, aes(x = income_group, y = targets_per_10000, group =
         plot.title = element_text(size = 12),
         plot.subtitle = element_text(size = 10),
         axis.text = element_text(size =12),
-        axis.title = element_text(size = 12)) +
+        axis.title = element_text(size = 12)) + 
   scale_y_continuous(breaks =c(0,20,40,60,80,100))+
   geom_text(df_sth %>% 
               filter(targets_per_10000>=20 | COUNTRY == "ETH" | income_group== "High income"),

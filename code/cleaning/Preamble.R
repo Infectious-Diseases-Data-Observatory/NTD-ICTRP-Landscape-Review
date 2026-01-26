@@ -39,9 +39,19 @@ populations <- read_csv("data/external/populations.csv", skip = 4, show_col_type
 ages <- read_csv("data/analysis/ages.csv", show_col_types = FALSE) %>% 
   select(TrialID, age_min, age_max)
 
+country_20 = read_csv("data/curated/Country_20.csv", guess_max = Inf, show_col_types = FALSE)
+
+country_20[which(country_20$TrialID == "NCT03311607"), "COUNTRY"] = "BGD"
+country_20[which(country_20$TrialID == "NCT02646943"), "COUNTRY"] = "BRA"
+country_20[which(country_20$TrialID == "NCT02148822"), "COUNTRY"] = "ETH"
+country_20[which(country_20$TrialID == "JPRN-UMIN000011426"), "COUNTRY"] = "BGD"
+country_20[which(country_20$TrialID == "NCT00463528"), "COUNTRY"] = "BFA"
+country_20[which(country_20$TrialID == "NCT00023556"), "COUNTRY"] = "BRA"
+country_20[which(country_20$TrialID == "NCT00005455"), "COUNTRY"] = "USA"
+
 # IDDO-Curated ICTRP data 
 ictrp <- read_csv("data/curated/Conditions_17.csv", guess_max = Inf, show_col_types = FALSE) %>% 
-  full_join(read_csv("data/curated/Country_20.csv", guess_max = Inf, show_col_types = FALSE), 
+  full_join(country_20, 
             by = "TrialID") %>% 
   full_join(read_csv("data/curated/Phase_5.csv", guess_max = Inf, show_col_types = FALSE), 
             by = "TrialID") %>% 
@@ -94,8 +104,8 @@ vl_burden <- read_csv("data/external/DALYs-VL.csv", show_col_types = FALSE) %>%
 # Data cleaning
 ictrp[which(is.na(ictrp$CENTRE)), "CENTRE"] <- "Missing"
 
-ictrp[which(ictrp$TrialID == "RBR-5n4htp"),"PHASE"] <- "PHASE I/II TRIAL"
-ictrp[which(ictrp$TrialID == "CTRI/2018/06/014579"),"PHASE"] <- "PHASE IV TRIAL"
+ictrp[which(ictrp$TrialID == "RBR-5n4htp"), "PHASE"] <- "PHASE I/II TRIAL"
+ictrp[which(ictrp$TrialID == "CTRI/2018/06/014579"), "PHASE"] <- "PHASE IV TRIAL"
 
 label(ictrp$StandardisedCondition) <- "Disease"
 
@@ -108,7 +118,7 @@ ictrp_split = ictrp %>%
 # colour palettes
 colours_set3 = c(
   "#BEBADA",
-  "#FFED6F",
+  # "#FFED6F",
   "#B3DE69",
   "#FDB462",
   "#80B1D3",

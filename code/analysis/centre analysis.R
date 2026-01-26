@@ -37,7 +37,7 @@ plots = plot_grid(
                          guide = guide_legend(reverse = TRUE)) +
     scale_alpha_manual(guide = "none",
                        values = c(0.65,1)) +
-    scale_fill_manual(values = c(colours_set3[c(1,4,5,6)])) +
+    scale_fill_manual(values = c(colours_set3[c(1,3,4,5)]))  +
     labs(x = "Country",
          y = "Number of Studies",
          fill = "",
@@ -114,7 +114,7 @@ plots = plot_grid(
                          guide = guide_legend(reverse = TRUE)) +
     scale_alpha_manual(guide = "none",
                        values = c(0.65,1)) +
-    scale_fill_manual(values = c(colours_set3[c(1,4,5,6)])) +
+    scale_fill_manual(values = c(colours_set3[c(1,3,4,5)])) +
     labs(x = "Country",
          y = "Number of Studies",
          fill = "",
@@ -152,11 +152,12 @@ plots = plot_grid(
                            "Multi-Country" = "stripe")) +
     scale_alpha_manual(guide = "none",
                        values = c(0.65,1)) +
-    scale_fill_manual(values = c(colours_set3[c(1,4,5,6)])) +
+    scale_fill_manual(values = c(colours_set3[c(1,3,4,5)]))  +
     labs(x = "Country",
          y = "Number of Studies",
          fill = "",
-         title = "Visceral Leishmaniasis"))
+         title = "Visceral Leishmaniasis"),
+  align = "hv")
 
 plots
 
@@ -192,7 +193,7 @@ legend = get_legend(ggplot(ictrp_split %>%
                                            guide = guide_legend(reverse = TRUE)) +
                       scale_alpha_manual(guide = "none",
                                          values = c(0.65,1)) +
-                      scale_fill_manual(values = c(colours_set3[c(1,4,5,6)])) +
+                      scale_fill_manual(values = c(colours_set3[c(1,3,4,5)]))  +
                       labs(x = "Country",
                            y = "Number of Studies",
                            fill = "",

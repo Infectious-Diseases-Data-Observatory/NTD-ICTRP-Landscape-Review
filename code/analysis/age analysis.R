@@ -92,9 +92,9 @@ for (disease in c("Chagas Disease", "Schistosomiasis",
     # scale_colour_viridis_d()+
     geom_point(aes(x = min_age, colour = WHO_Region))+
     geom_point(aes(x = max_age, colour = WHO_Region))+
-    geom_vline(xintercept = 5, color = colours_set3[12], 
+    geom_vline(xintercept = 5, color = colours_set3[11], 
                linetype = 2, lwd = 1.5, alpha = 0.5)+
-    geom_vline(xintercept = 15, color = colours_set3[12], 
+    geom_vline(xintercept = 15, color = colours_set3[11], 
                linetype = 2, lwd = 1.5, alpha = 0.5) +
     # Highlight when there is a min age but no max age
     geom_segment(data = age_data %>% filter(is.na(max_age)),

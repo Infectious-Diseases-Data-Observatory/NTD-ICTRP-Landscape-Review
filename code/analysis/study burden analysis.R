@@ -1,7 +1,7 @@
 source("code/cleaning/Preamble.R")
 
-ntd_disease = "Visceral Leishmaniasis"
-burden_data = vl_burden
+ntd_disease = "Chagas Disease"
+burden_data = cd_burden
 max_number = 20 # chagas,vl - 20, sch,sth - 30
 
 tmp_04_13 <- ictrp_split %>% 
@@ -273,44 +273,44 @@ ggsave(str_c("lollipop_", ntd_disease, ".tiff"), path = "paper/figures/", width 
 ##
 
 
-cowplot::plot_grid(
-  p1+scale_size_continuous(trans = "log10", 
-                           limits = c(1,max(c(tmp_04_13$daly_mean_04_13_ppop*1000000, 
-                                              tmp_14_23$daly_mean_14_23_ppop*1000000), 
-                                            na.rm = TRUE))), 
-  p3+scale_size_continuous(trans= "log10", 
-                           limits = c(1,max(c(tmp_04_13$daly_mean_04_13_ppop*1000000,
-                                              tmp_14_23$daly_mean_14_23_ppop*1000000), 
-                                            na.rm = TRUE))), 
-  nrow = 1, labels = ntd_disease, rel_widths = c(0.45, 0.55), vjust = 1, hjust = -0.1)
+# cowplot::plot_grid(
+#   p1+scale_size_continuous(trans = "log10", 
+#                            limits = c(1,max(c(tmp_04_13$daly_mean_04_13_ppop*1000000, 
+#                                               tmp_14_23$daly_mean_14_23_ppop*1000000), 
+#                                             na.rm = TRUE))), 
+#   p3+scale_size_continuous(trans= "log10", 
+#                            limits = c(1,max(c(tmp_04_13$daly_mean_04_13_ppop*1000000,
+#                                               tmp_14_23$daly_mean_14_23_ppop*1000000), 
+#                                             na.rm = TRUE))), 
+#   nrow = 1, labels = ntd_disease, rel_widths = c(0.45, 0.55), vjust = 1, hjust = -0.1)
 
-px = tmp_04_13 %>%
-  select(COUNTRY, income_group, rown) %>% 
-  rename("rown_04_13" = "rown") %>% 
-  left_join((tmp_14_23 %>% select(COUNTRY, rown) %>% rename("rown_14_23" = "rown")), by = "COUNTRY") %>% 
-  pivot_longer(cols = c(starts_with("rown"))) %>% 
-  filter(value <= max_number) %>%  
-  ggplot(aes(x = name, y = desc(value), group = COUNTRY, colour = income_group)) + 
-    ggbump::geom_bump(linewidth = 1.5, show.legend = TRUE) +# , colour = "grey"
-    theme_void() +
-  theme(panel.background = element_rect(fill = "white", colour = "white"),
-        plot.background = element_rect(fill = "white", colour = "white")) +
-  scale_y_continuous(expand = c(0,0.6), limits = c(-max_number, -1)) # cd: 0.6, sch: , sth:, vl: 
-
-# px = px + 
-#   ggbump::geom_bump(linewidth = 1.5, mapping = aes(colour = COUNTRY), data = tmp_04_13 %>%
-#                       select(COUNTRY, rown) %>% 
-#                       rename("rown_04_13" = "rown") %>% 
-#                       left_join((tmp_14_23 %>% select(COUNTRY, rown) %>% rename("rown_14_23" = "rown")), by = "COUNTRY") %>% 
-#                       pivot_longer(cols = c(starts_with("rown"))) %>% 
-#                       filter(value <= max_number,
-#                              COUNTRY %in% c("GHA", "GBR", "UGA"))) +
-#   theme(legend.position = "none")+
-#   scale_colour_viridis_d()
-
-cowplot::plot_grid(p1, px, p3, nrow = 1, labels = ntd_disease, rel_widths = c(0.4, 0.1 ,0.5), align = "h", vjust = 1, hjust = -0.1)
-
-ggsave(str_c("lollipop_", ntd_disease, "_bump.tiff"), path = "paper/figures/", width = 14.3, height = 8.2)
+# px = tmp_04_13 %>%
+#   select(COUNTRY, income_group, rown) %>% 
+#   rename("rown_04_13" = "rown") %>% 
+#   left_join((tmp_14_23 %>% select(COUNTRY, rown) %>% rename("rown_14_23" = "rown")), by = "COUNTRY") %>% 
+#   pivot_longer(cols = c(starts_with("rown"))) %>% 
+#   filter(value <= max_number) %>%  
+#   ggplot(aes(x = name, y = desc(value), group = COUNTRY, colour = income_group)) + 
+#     ggbump::geom_bump(linewidth = 1.5, show.legend = TRUE) +# , colour = "grey"
+#     theme_void() +
+#   theme(panel.background = element_rect(fill = "white", colour = "white"),
+#         plot.background = element_rect(fill = "white", colour = "white")) +
+#   scale_y_continuous(expand = c(0,0.6), limits = c(-max_number, -1)) # cd: 0.6, sch: , sth:, vl: 
+# 
+# # px = px + 
+# #   ggbump::geom_bump(linewidth = 1.5, mapping = aes(colour = COUNTRY), data = tmp_04_13 %>%
+# #                       select(COUNTRY, rown) %>% 
+# #                       rename("rown_04_13" = "rown") %>% 
+# #                       left_join((tmp_14_23 %>% select(COUNTRY, rown) %>% rename("rown_14_23" = "rown")), by = "COUNTRY") %>% 
+# #                       pivot_longer(cols = c(starts_with("rown"))) %>% 
+# #                       filter(value <= max_number,
+# #                              COUNTRY %in% c("GHA", "GBR", "UGA"))) +
+# #   theme(legend.position = "none")+
+# #   scale_colour_viridis_d()
+# 
+# cowplot::plot_grid(p1, px, p3, nrow = 1, labels = ntd_disease, rel_widths = c(0.4, 0.1 ,0.5), align = "h", vjust = 1, hjust = -0.1)
+# 
+# ggsave(str_c("lollipop_", ntd_disease, "_bump.tiff"), path = "paper/figures/", width = 14.3, height = 8.2)
 
 # p4_df = tmp_14_23 %>% 
 #   filter(is.na(n_studies), daly_mean_14_23_ppop > 0) %>% 

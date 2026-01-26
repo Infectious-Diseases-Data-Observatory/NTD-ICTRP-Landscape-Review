@@ -88,5 +88,13 @@ ggsave("phase_income.tiff", path = "paper/figures/", width = 18, height = 10.0)
 table1(~ CENTRE + RECRUITMENT_STATUS + PHASE| StandardisedCondition, data = ictrp,
        topclass = "Rtable1-zebra")
 
-table1(~ PHASE + PLACEBO + MASKING + RANDOMIZATION + `PRIMARY PRUPOSE` | StandardisedCondition, data = ictrp %>% filter(STUDY_TYPE == "INTERVENTIONAL"),
+table1(~ PHASE + RANDOMIZATION + `INTERVENTION MODEL RESPONSE`  + MASKING | StandardisedCondition, data = ictrp %>% filter(STUDY_TYPE == "INTERVENTIONAL", str_detect(StandardisedCondition, "Chagas")),
+       topclass = "Rtable1-zebra")
+
+table1(~ PHASE| CENTRE, 
+       data = ictrp %>% filter(str_detect(StandardisedCondition, "Chagas")),
+       topclass = "Rtable1-zebra")
+
+table1(~ STUDY_TYPE | StandardisedCondition, 
+       data = ictrp %>% filter(str_detect(StandardisedCondition, "Viscer")),
        topclass = "Rtable1-zebra")
