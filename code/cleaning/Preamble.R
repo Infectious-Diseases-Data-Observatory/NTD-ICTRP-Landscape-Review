@@ -19,24 +19,24 @@ library(viridisLite)
 source("code/cleaning/clean_burden_data.R")
 #-------------------------------------------------------------------------------
 # Centroid/centre of country coordinates
-centroids <- read_csv("data/external/centroids.csv", show_col_types = FALSE)
+# centroids <- read_csv("data/external/centroids.csv", show_col_types = FALSE)
 
 # Display names for countries
-display_names <- read_csv("data/curated/display_names.csv", show_col_types = FALSE) %>% 
+display_names <- read_csv("data/curated/display_names.csv", show_col_types = FALSE) %>%
   select(alpha_3_code, display_name)
 
 # ICTRP Extract of all NTDs
 ictrp_extract <- read_csv("data/curated/ICTRP_extract_all_NTD.csv",
-                    show_col_types = FALSE, guess_max = Inf) %>% 
-  select(TrialID, `TARGET SIZE`) 
+                    show_col_types = FALSE, guess_max = Inf) %>%
+  select(TrialID, `TARGET SIZE`)
 
 # Data on country population
-populations <- read_csv("data/external/populations.csv", skip = 4, show_col_types = FALSE, guess_max = Inf) %>% 
-  select(`Country Name`, `Country Code`, `2023`, `2018`, `2013`, `2008`) %>% 
+populations <- read_csv("data/external/populations.csv", skip = 4, show_col_types = FALSE, guess_max = Inf) %>%
+  select(`Country Name`, `Country Code`, `2023`, `2018`, `2013`, `2008`) %>%
   clean_names()
 
-# Cleaned inclusion ages 
-ages <- read_csv("data/analysis/ages.csv", show_col_types = FALSE) %>% 
+# Cleaned inclusion ages
+ages <- read_csv("data/analysis/ages.csv", show_col_types = FALSE) %>%
   select(TrialID, age_min, age_max)
 
 country_20 = read_csv("data/curated/Country_20.csv", guess_max = Inf, show_col_types = FALSE)
@@ -49,22 +49,22 @@ country_20[which(country_20$TrialID == "NCT00463528"), "COUNTRY"] = "BFA"
 country_20[which(country_20$TrialID == "NCT00023556"), "COUNTRY"] = "BRA"
 country_20[which(country_20$TrialID == "NCT00005455"), "COUNTRY"] = "USA"
 
-# IDDO-Curated ICTRP data 
-ictrp <- read_csv("data/curated/Conditions_17.csv", guess_max = Inf, show_col_types = FALSE) %>% 
-  full_join(country_20, 
-            by = "TrialID") %>% 
-  full_join(read_csv("data/curated/Phase_5.csv", guess_max = Inf, show_col_types = FALSE), 
-            by = "TrialID") %>% 
-  full_join(read_csv("data/curated/Study Design_9.csv", guess_max = Inf, show_col_types = FALSE),
-            by = "TrialID") %>% 
-  full_join(read_csv("data/curated/Study Dates and Inclusion_0.csv", guess_max = Inf, show_col_types = FALSE), 
+# IDDO-Curated ICTRP data
+ictrp <- read_csv("data/curated/Conditions_17.csv", guess_max = Inf, show_col_types = FALSE) %>%
+  full_join(country_20,
             by = "TrialID") %>%
-  derive_vars_dtm(dtc = DATE_ENROLLEMENT, 
-                  highest_imputation = "D", 
-                  date_imputation = "first", 
+  full_join(read_csv("data/curated/Phase_5.csv", guess_max = Inf, show_col_types = FALSE),
+            by = "TrialID") %>%
+  full_join(read_csv("data/curated/Study Design_9.csv", guess_max = Inf, show_col_types = FALSE),
+            by = "TrialID") %>%
+  full_join(read_csv("data/curated/Study Dates and Inclusion_0.csv", guess_max = Inf, show_col_types = FALSE),
+            by = "TrialID") %>%
+  derive_vars_dtm(dtc = DATE_ENROLLEMENT,
+                  highest_imputation = "D",
+                  date_imputation = "first",
                   new_vars_prefix = "DATE_ENROLLMENT_IMP_") %>%
-  select(-DATE_ENROLLMENT_IMP_TMF) %>% 
-  relocate(c(DATE_ENROLLMENT_IMP_DTM, DATE_ENROLLMENT_IMP_DTF), .after = DATE_ENROLLEMENT) %>% 
+  select(-DATE_ENROLLMENT_IMP_TMF) %>%
+  relocate(c(DATE_ENROLLMENT_IMP_DTM, DATE_ENROLLMENT_IMP_DTF), .after = DATE_ENROLLEMENT) %>%
   mutate(DATE_ENROLLMENT_IMP_DTM = as.Date(DATE_ENROLLMENT_IMP_DTM),
          INCLUSION_AGEMIN_Aug2024 = str_to_upper(INCLUSION_AGEMIN_Aug2024),
          INCLUSION_AGEMAX_Aug2024 = str_to_upper(INCLUSION_AGEMAX_Aug2024),
@@ -74,30 +74,30 @@ ictrp <- read_csv("data/curated/Conditions_17.csv", guess_max = Inf, show_col_ty
          PHASE = factor(PHASE, levels = c("PHASE IV TRIAL", "PHASE III TRIAL",
                                           "PHASE II/III TRIAL", "PHASE II TRIAL",
                                           "PHASE I/II TRIAL", "PHASE I TRIAL", "NOT APPLICABLE")),
-         CENTRE = if_else(str_detect(COUNTRY, "\\|"), "Multi-Country", "Single Country") 
-         ) %>% 
-  left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>% 
-  select(-country, -economy) %>% 
-  left_join(ictrp_extract) 
+         CENTRE = if_else(str_detect(COUNTRY, "\\|"), "Multi-Country", "Single Country")
+         ) %>%
+  left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>%
+  select(-country, -economy) %>%
+  left_join(ictrp_extract)
 
 ictrp[which(ictrp$COUNTRY == "ETH"),"income_group"] = "Low income"
 
 # WHO regions data
-who_regions <- read_csv("data/external/who-regions.csv", guess_max = Inf, show_col_types = FALSE) %>% 
-  select(-Year) %>% 
-  rename("WHO_Region" = "WHO region") 
+who_regions <- read_csv("data/external/who-regions.csv", guess_max = Inf, show_col_types = FALSE) %>%
+  select(-Year) %>%
+  rename("WHO_Region" = "WHO region")
 
-#DALYs burden data 
-cd_burden <- read_csv("data/external/DALYs-CD.csv", show_col_types = FALSE) %>% 
+#DALYs burden data
+cd_burden <- read_csv("data/external/DALYs-CD.csv", show_col_types = FALSE) %>%
   clean_burden_data()
 
-sch_burden <- read_csv("data/external/DALYs-SCH.csv", show_col_types = FALSE)%>% 
+sch_burden <- read_csv("data/external/DALYs-SCH.csv", show_col_types = FALSE)%>%
   clean_burden_data()
 
-sth_burden <- read_csv("data/external/DALYs-INF.csv", show_col_types = FALSE) %>% 
+sth_burden <- read_csv("data/external/DALYs-INF.csv", show_col_types = FALSE) %>%
   clean_burden_data()
 
-vl_burden <- read_csv("data/external/DALYs-VL.csv", show_col_types = FALSE) %>% 
+vl_burden <- read_csv("data/external/DALYs-VL.csv", show_col_types = FALSE) %>%
   clean_burden_data()
 
 #-------------------------------------------------------------------------------
@@ -109,9 +109,9 @@ ictrp[which(ictrp$TrialID == "CTRI/2018/06/014579"), "PHASE"] <- "PHASE IV TRIAL
 
 label(ictrp$StandardisedCondition) <- "Disease"
 
-ictrp_split = ictrp %>% 
-  separate_rows(COUNTRY) %>% 
-  left_join(who_regions, by = c(COUNTRY = "Code")) %>% 
+ictrp_split = ictrp %>%
+  separate_rows(COUNTRY) %>%
+  left_join(who_regions, by = c(COUNTRY = "Code")) %>%
   mutate(WHO_Region  = as.factor(WHO_Region))
 
 #-------------------------------------------------------------------------------
