@@ -3,14 +3,14 @@ source("code/cleaning/Preamble.R")
 world_income[which(world_income$alpha_3_code == "ETH"),"income_group"] = "Low income"
 
 plots = plot_grid(
-  ggplot(ictrp_split %>% 
-           filter(str_detect(StandardisedCondition, "Chagas"))%>% 
-           left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>% 
-           filter(!is.na(COUNTRY)) %>% 
+  ggplot(ictrp_split %>%
+           filter(str_detect(StandardisedCondition, "Chagas"))%>%
+           left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>%
+           filter(!is.na(COUNTRY)) %>%
            left_join(display_names, c("COUNTRY" = "alpha_3_code")),
          aes(x = display_name,pattern = CENTRE,
              fill = income_group.y, alpha = CENTRE))+
-    geom_bar_pattern(position = "stack", 
+    geom_bar_pattern(position = "stack",
                      aes(x = reorder(display_name, as.numeric(income_group.y))),
                      colour = "black",
                      pattern_spacing = 0.025,
@@ -27,7 +27,7 @@ plots = plot_grid(
       strip.background = element_blank(),
       panel.background = element_blank(),
       panel.grid.major = element_line(colour = "#dadada"),
-      axis.text.y = element_text(size = 8)  
+      axis.text.y = element_text(size = 8)
     ) +
     scale_pattern_manual(name = "",
                          values = c(
@@ -42,14 +42,14 @@ plots = plot_grid(
          y = "Number of Studies",
          fill = "",
          title = "Chagas Disease"),
-  ggplot(ictrp_split %>% 
-           filter(str_detect(StandardisedCondition, "Schisto")) %>% 
-           left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>% 
-           filter(!is.na(COUNTRY))%>% 
+  ggplot(ictrp_split %>%
+           filter(str_detect(StandardisedCondition, "Schisto")) %>%
+           left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>%
+           filter(!is.na(COUNTRY))%>%
            left_join(display_names, c("COUNTRY" = "alpha_3_code")),
          aes(x = display_name,pattern = CENTRE,
              fill = income_group.y, alpha = CENTRE)) +
-    geom_bar_pattern(position = "stack", 
+    geom_bar_pattern(position = "stack",
                      aes(x = reorder(display_name, as.numeric(income_group.y))),
                      colour = "black",
                      pattern_spacing = 0.025,
@@ -66,7 +66,7 @@ plots = plot_grid(
       strip.background = element_blank(),
       panel.background = element_blank(),
       panel.grid.major = element_line(colour = "#dadada"),
-      axis.text.y = element_text(size = 8)  
+      axis.text.y = element_text(size = 8)
     ) +
     scale_pattern_manual(name = "",
                          values = c(
@@ -76,19 +76,19 @@ plots = plot_grid(
                          guide = guide_legend(reverse = TRUE)) +
     scale_alpha_manual(guide = "none",
                        values = c(0.65,1)) +
-    scale_fill_manual(values = c(colours_set3[c(1,4,5,6)])) +
+    scale_fill_manual(values = c(colours_set3[c(1,3,4,5)])) +
     labs(x = "Country",
          y = "Number of Studies",
          fill = "",
          title = "Schistosomiasis"),
-  ggplot(ictrp_split %>% 
-           filter(str_detect(StandardisedCondition, "Soil")) %>% 
-           left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>% 
-           filter(!is.na(COUNTRY))%>% 
+  ggplot(ictrp_split %>%
+           filter(str_detect(StandardisedCondition, "Soil")) %>%
+           left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>%
+           filter(!is.na(COUNTRY))%>%
            left_join(display_names, c("COUNTRY" = "alpha_3_code")),
          aes(x = display_name,pattern = CENTRE,
              fill = income_group.y, alpha = CENTRE)) +
-    geom_bar_pattern(position = "stack", 
+    geom_bar_pattern(position = "stack",
                      aes(x = reorder(display_name, as.numeric(income_group.y))),
                      colour = "black",
                      pattern_spacing = 0.025,
@@ -104,7 +104,7 @@ plots = plot_grid(
       strip.background = element_blank(),
       panel.background = element_blank(),
       panel.grid.major = element_line(colour = "#dadada") ,
-      axis.text.y = element_text(size = 8) 
+      axis.text.y = element_text(size = 8)
     )+
     scale_pattern_manual(name = "",
                          values = c(
@@ -119,14 +119,14 @@ plots = plot_grid(
          y = "Number of Studies",
          fill = "",
          title = "Soil-Transmitted Helminthiases"),
-  ggplot(ictrp_split %>% 
-           filter(str_detect(StandardisedCondition, "Viscer")) %>% 
-           left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>% 
-           filter(!is.na(COUNTRY))%>% 
+  ggplot(ictrp_split %>%
+           filter(str_detect(StandardisedCondition, "Viscer")) %>%
+           left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>%
+           filter(!is.na(COUNTRY))%>%
            left_join(display_names, c("COUNTRY" = "alpha_3_code")),
          aes(x = display_name,pattern = CENTRE,
              fill = income_group.y, alpha = CENTRE)) +
-    geom_bar_pattern(position = "stack", 
+    geom_bar_pattern(position = "stack",
                      aes(x = reorder(display_name, as.numeric(income_group.y))),
                      colour = "black",
                      pattern_spacing = 0.025,
@@ -143,7 +143,7 @@ plots = plot_grid(
       strip.background = element_blank(),
       panel.background = element_blank(),
       panel.grid.major = element_line(colour = "#dadada"),
-      axis.text.y = element_text(size = 8) 
+      axis.text.y = element_text(size = 8)
     ) +
     scale_pattern_manual(name = "",
                          values = c(
@@ -161,13 +161,13 @@ plots = plot_grid(
 
 plots
 
-legend = get_legend(ggplot(ictrp_split %>% 
-                             filter(str_detect(StandardisedCondition, "Schisto")) %>% 
-                             left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>% 
+legend = get_legend(ggplot(ictrp_split %>%
+                             filter(str_detect(StandardisedCondition, "Schisto")) %>%
+                             left_join(world_income, by = c("COUNTRY" = "alpha_3_code")) %>%
                              filter(!is.na(COUNTRY)),
                            aes(x = COUNTRY,pattern = CENTRE,
                                fill = income_group.y, alpha = CENTRE)) +
-                      geom_bar_pattern(position = "stack", 
+                      geom_bar_pattern(position = "stack",
                                        aes(x = reorder(COUNTRY, as.numeric(income_group.y))),
                                        colour = "black",
                                        pattern_spacing = 0.025,
@@ -183,7 +183,7 @@ legend = get_legend(ggplot(ictrp_split %>%
                         strip.background = element_blank(),
                         panel.background = element_blank(),
                         panel.grid.major = element_line(colour = "#dadada"),
-                        axis.text.y = element_text(size = 8)  
+                        axis.text.y = element_text(size = 8)
                       ) +
                       scale_pattern_manual(name = "",
                                            values = c(
