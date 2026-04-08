@@ -1,0 +1,40 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Page-1" id="WWlYvCDcvljDLSDHdXY-">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-3" edge="1" parent="1" source="AQjBcYzanTLQCEIr4Myh-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AQjBcYzanTLQCEIr4Myh-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-5" edge="1" parent="1" source="AQjBcYzanTLQCEIr4Myh-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AQjBcYzanTLQCEIr4Myh-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Records identified and assessed for eligibility&amp;nbsp;&lt;div&gt;from ICTRP&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;n&lt;/i&gt; = 2270&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="120" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="Reports excluded:&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Reason 1 (&lt;i&gt;n&lt;/i&gt; = 462)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Reason 2 (&lt;i&gt;n &lt;/i&gt;=&amp;nbsp; &amp;nbsp;12)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Reason 3 (&lt;i&gt;n &lt;/i&gt;=&amp;nbsp; &amp;nbsp; &amp;nbsp;6)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Reason 4 (&lt;i&gt;n &lt;/i&gt;=&amp;nbsp; &amp;nbsp;34)&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="180" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-7" edge="1" parent="1" source="AQjBcYzanTLQCEIr4Myh-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AQjBcYzanTLQCEIr4Myh-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-9" edge="1" parent="1" source="AQjBcYzanTLQCEIr4Myh-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AQjBcYzanTLQCEIr4Myh-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Records curated&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;n&lt;/i&gt; = 1756&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="120" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="Reports excluded (outside diseases of interest): &lt;i&gt;n &lt;/i&gt;= 1441" vertex="1">
+          <mxGeometry height="80" width="180" x="360" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Records used in&amp;nbsp;&lt;div&gt;analysis&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;n&lt;/i&gt; = 315&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="120" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="AQjBcYzanTLQCEIr4Myh-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;Registration screening flow.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Exclusion criteria:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Reason 1: The condition studied is not an NTD&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Reason 2: Vector studies where outcome is not disease or burden related&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Reason 3: Human infection models where outcomes are not related to NTD disease or burden&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Reason 4: Focus of the study is not an NTD outcome, burden or treatment of NTD&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="540" x="120" y="480" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
