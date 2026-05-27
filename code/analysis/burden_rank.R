@@ -11,8 +11,7 @@ rank_cd = read_csv("data/external/DALYs-CD.csv", show_col_types = FALSE) %>%
   mutate(rank = if_else(rank_all > 10, 11L, rank_all)) %>%
   ungroup() %>%
   filter(
-    rank <= 15,
-    # year %in% c(2000, 2005, 2010, 2015, 2020)
+    rank <= 15
     ) %>%
   left_join(display_names)
 
@@ -60,7 +59,6 @@ rank_sch = read_csv("data/external/DALYs-SCH.csv", show_col_types = FALSE) %>%
 
 rank_plot_sch =ggplot(rank_sch, aes(x = year, y = rank, group = alpha_3_code))+#, colour = alpha_3_code
   geom_bump(linewidth = 1.5, colour = "lightgray") +
-  # geom_bump(linewidth = 1.5, colour = "black", data = rank_sch %>% filter(rank < 11)) +
   geom_bump(data = rank_sch %>%
               filter(alpha_3_code %in% c("UGA", "SEN", "BEN", "KEN")),
             linewidth = 1.5, mapping = aes(color = alpha_3_code)) +
@@ -96,14 +94,12 @@ rank_sth = read_csv("data/external/DALYs-INF.csv", show_col_types = FALSE) %>%
   mutate(rank = if_else(rank_all > 10, 11L, rank_all)) %>%
   ungroup() %>%
   filter(
-    rank <= 15,
-    # year %in% c(2000, 2005, 2010, 2015, 2020)
+    rank <= 15
   )  %>%
   left_join(display_names)
 
 rank_plot_sth =ggplot(rank_sth, aes(x = year, y = rank, group = alpha_3_code))+#, colour = alpha_3_code
   geom_bump(linewidth = 1.5, colour = "lightgray") +
-  # geom_bump(linewidth = 1.5, colour = "black", data = rank_sch %>% filter(rank < 11)) +
   geom_bump(data = rank_sth %>%
               filter(alpha_3_code %in% c("NPL", "MMR", "SLE", "TZA", "PNG")),
             linewidth = 1.5, mapping = aes(color = alpha_3_code)) +
@@ -140,14 +136,12 @@ rank_vl = read_csv("data/external/DALYs-VL.csv", show_col_types = FALSE) %>%
   mutate(rank = if_else(rank_all > 10, 11L, rank_all)) %>%
   ungroup() %>%
   filter(
-    rank <= 15,
-    # year %in% c(2000, 2005, 2010, 2015, 2020)
+    rank <= 15
   )  %>%
   left_join(display_names)
 
 rank_plot_vl =ggplot(rank_vl, aes(x = year, y = rank, group = alpha_3_code))+#, colour = alpha_3_code
   geom_bump(linewidth = 1.5, colour = "lightgray") +
-  # geom_bump(linewidth = 1.5, colour = "black", data = rank_sch %>% filter(rank < 11)) +
   geom_bump(data = rank_vl %>%
               filter(alpha_3_code %in% c("NPL", "BGD", "CAF", "NER", "DJI")),
             linewidth = 1.5, mapping = aes(color = alpha_3_code)) +
