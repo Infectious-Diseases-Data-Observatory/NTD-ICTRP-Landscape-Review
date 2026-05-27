@@ -16,7 +16,7 @@ This repo contains the data and code used in the analysis of the above paper.
 
 ## Citation
 
-TBC
+Peploe R, Jauncey H, Sakai Y, Karam G, Ross AL, Charnaud SC, et al. (2026) A snapshot of selected neglected tropical disease research using the World Health Organization International Clinical Trials Registry Platform database, 1999–2023. PLoS Negl Trop Dis 20(5): e0014338. https://doi.org/10.1371/journal.pntd.0014338
 
 ## Issues
 
