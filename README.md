@@ -24,4 +24,4 @@ Any issues with the code or data can be logged in the [issues tab](https://githu
 
 ## Contact
 
-Please contact ([rhys.peploe\@iddo.org](mailto:rhys.peploe@iddo.org){.email} or [rhyspeploe1998\@gmail.com](mailto:rhyspeploe1998@gmail.com){.email}) if you would like to know more.
+Please contact ([rhys.peploe\@ndm.ox.ac.uk](mailto:rhys.peploe@ndm.ox.ac.uk){.email} or [rhyspeploe1998\@gmail.com](mailto:rhyspeploe1998@gmail.com){.email}) if you would like to know more.
